@@ -1,0 +1,41 @@
+{
+  "users": [
+    {
+      "name": "admin",
+      "password_hash": "CHANGE_ME — générer avec : docker run --rm rabbitmq:4-management-alpine rabbitmqctl hash_password <password>",
+      "hashing_algorithm": "rabbit_password_hashing_sha256",
+      "tags": "administrator"
+    },
+    {
+      "name": "ocr",
+      "password_hash": "CHANGE_ME",
+      "hashing_algorithm": "rabbit_password_hashing_sha256",
+      "tags": ""
+    },
+    {
+      "name": "urlshortener",
+      "password_hash": "CHANGE_ME",
+      "hashing_algorithm": "rabbit_password_hashing_sha256",
+      "tags": ""
+    }
+  ],
+  "vhosts": [
+    {"name": "/"},
+    {"name": "ocr"},
+    {"name": "urlshortener"}
+  ],
+  "permissions": [
+    {"user": "admin", "vhost": "/",             "configure": ".*", "write": ".*", "read": ".*"},
+    {"user": "admin", "vhost": "ocr",           "configure": ".*", "write": ".*", "read": ".*"},
+    {"user": "admin", "vhost": "urlshortener",  "configure": ".*", "write": ".*", "read": ".*"},
+    {"user": "ocr",   "vhost": "ocr",           "configure": ".*", "write": ".*", "read": ".*"},
+    {"user": "urlshortener", "vhost": "urlshortener", "configure": ".*", "write": ".*", "read": ".*"}
+  ],
+  "topic_permissions": [],
+  "parameters": [],
+  "global_parameters": [],
+  "policies": [],
+  "queues": [],
+  "exchanges": [],
+  "bindings": []
+}
