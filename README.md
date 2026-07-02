@@ -72,19 +72,19 @@ Garage requires a one-time cluster layout setup after the first start:
 
 ```bash
 # Get the node ID
-docker exec garage-prod garage status
+docker exec garage-prod /garage status
 
 # Assign capacity (adjust -c to the available disk in GB)
-docker exec garage-prod garage layout assign -z dc1 -c 50 <NODE_ID>
-docker exec garage-prod garage layout apply --version 1
+docker exec garage-prod /garage layout assign -z dc1 -c 50GB <NODE_ID>
+docker exec garage-prod /garage layout apply --version 1
 ```
 
 Then create buckets and access keys via the [Garage admin API](https://garagehq.deuxfleurs.fr/documentation/reference-manual/admin-api/) or the CLI:
 
 ```bash
-docker exec garage-prod garage bucket create my-bucket
-docker exec garage-prod garage key create my-key
-docker exec garage-prod garage bucket allow my-bucket --read --write --key my-key
+docker exec garage-prod /garage bucket create my-bucket
+docker exec garage-prod /garage key create my-key
+docker exec garage-prod /garage bucket allow my-bucket --read --write --key my-key
 ```
 
 ## Day-to-day operations
