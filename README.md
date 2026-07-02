@@ -8,7 +8,7 @@ Shared infrastructure stack — Redis, RabbitMQ, Garage (S3-compatible).
 | --- | --- | --- |
 | RabbitMQ | `rabbitmq:4-management-alpine` | Message broker, one vhost per project |
 | Redis | `redis:8-alpine` | Cache / queue backend |
-| Garage | `dss0/garage:v1.0.2` | S3-compatible object storage |
+| Garage | `dxflrs/garage:v2.3.0` | S3-compatible object storage |
 
 ## First-time setup
 
