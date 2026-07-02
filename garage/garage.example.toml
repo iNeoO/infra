@@ -7,7 +7,7 @@ replication_factor = 1
 
 rpc_bind_addr   = "0.0.0.0:3901"
 rpc_public_addr = "garage-prod:3901"
-# Générer avec : openssl rand -hex 32
+# Generate with: openssl rand -hex 32
 rpc_secret = "CHANGE_ME_64_HEX_CHARS"
 
 [s3_api]
@@ -17,5 +17,5 @@ root_domain   = ".s3.garage"
 
 [admin]
 api_bind_addr = "0.0.0.0:3903"
-# Générer avec : openssl rand -base64 32
+# Generate with: openssl rand -base64 32
 admin_token = "CHANGE_ME_ADMIN_TOKEN"
