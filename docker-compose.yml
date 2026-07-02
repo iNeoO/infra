@@ -35,7 +35,7 @@ services:
       - redis-network
 
   garage:
-    image: dss0/garage:v1.0.2
+    image: dxflrs/garage:v2.3.0
     container_name: garage-prod
     restart: unless-stopped
     volumes:
