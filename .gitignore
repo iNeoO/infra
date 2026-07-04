@@ -1,3 +1,4 @@
 .env
 rabbitmq/definitions.json
 garage/garage.toml
+redis/users.acl

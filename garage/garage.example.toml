@@ -19,3 +19,8 @@ root_domain   = ".s3.garage"
 api_bind_addr = "0.0.0.0:3903"
 # Generate with: openssl rand -base64 32
 admin_token = "CHANGE_ME_ADMIN_TOKEN"
+# Scoped token for Prometheus — grants /metrics only, not the full admin API.
+# Generate with: openssl rand -base64 32
+metrics_token = "CHANGE_ME_METRICS_TOKEN"
+# Without this, /metrics stays open with no auth even if metrics_token is set.
+metrics_require_token = true
